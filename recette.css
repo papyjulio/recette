@@ -1,0 +1,143 @@
+*{                      /*selecteur qui permet de sélectionner toute la page html*/
+    overflow: auto; /*propiété qui permer d'adapter automatiquement les container -> evite les débordements*/
+}
+ 
+body{
+    background-color: #8BA1BB;/*couleur du fond*/
+    font-family: Arial;/*police d'ecriture*/
+}
+div.contenu{
+    background-color: white;
+    margin: 60px 60px 10% 60px;/*marge exterieure*/
+    padding: 0 30px 30px 30px;/*marge interne*/
+    min-width: 350px;/*ne peut se reduire sous cette taille.Evite probleme d'affichage notamment du tableau*/
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2); /*permet de mettrre ombre/flou autour d'un container*/
+    
+
+}
+h1{
+    text-align: center; /*alignement*/
+    margin-bottom: 12px;/*marge du bas*/
+    margin-top: 1px;/*marge du haut*/
+
+}
+
+p.categorie{
+    color: white; /*couleur de la police*/
+    display: inline-block; /*par defaut sur block : occupe toute la ligne, inline: place necessaire, inline-block: idem mais permet des margin... */
+    background-color: black;
+    padding: 8px 18px;
+    font-size: 16px;/*taille de police*/
+    font-weight: bold; /*mettre police en gras*/
+    margin: 0;
+}
+div.categorie{ 
+    margin-top: -50;
+    margin-bottom: 0;
+
+    
+    
+              
+}
+.center{    /*ici on commence par . affecte tous les center*/
+    text-align: center;
+    width: 100%; /*largeur. Ici occupe 100% de l'espace*/
+
+}
+p.description{
+    text-align: center;
+    max-width: 400px; /*largeur maximum*/
+    display: inline-block;
+    font-size: 14px;
+}
+div.separateur{
+    background-color: black;
+    width: 100px;
+    height: 1px;
+    margin-left: auto;/*mettre auto sur margin left et right permet de centrer le block quel que soit la taille*/
+    margin-right: auto;/*de la fenêtre*/
+}
+div.info{
+    position: relative;  /*permet des superposition*/
+}
+table.info{
+    position: absolute; /*associé avec un relative demande ici de mettre en bas (bottom: 0)la table.info*/
+    bottom: 0; 
+    width: 100%; 
+    color: white; 
+    background-color: #6C829DC0; /*les 2 dernier caractère correspondent à l'opacité*/
+    height: 80px; /*hauteur*/
+}
+table.info th{ /*attention espace avant th -> affecte les th de table.info*/
+    vertical-align: bottom; /*alignement vertical vers le bas*/
+    padding-bottom: 8px;
+}
+table.info td{
+    vertical-align: top;/*alignement vertical vers le haut*/
+    text-align: center;
+    font-size: 14px;
+}
+
+img.info{
+    display: block;
+    max-height: 400px; /*hauteur maximum*/
+    object-fit: cover; /*evite l'effet de déformation du à la hauteur max -> ici rogne les bords*/
+    min-height: 200px; /*permet de coserver un emplacement si pas d'image ou temps de chargement*/
+    background-color: lightgray; /*affiche une couleur si pas d'image*/
+}
+
+div.colonne{
+    width: 45%;
+    margin-top: 20px;
+    
+    
+}
+
+div.colonne1{
+    display: inline-block;/*permet d'occuper juste la place necessaire*/
+    margin-right: 10%;
+}
+
+div.colonne2{
+    float: right;/*affiche le block a droite. ATTENTION probème si il y a un <br> dans le html*/
+}
+.colonne h2{
+    text-align: center;
+    text-transform: uppercase;/*permet de mettre en majuscule*/
+    font-size: 15px;
+    border-bottom: 5px solid #6C829D;/*permet de faire apparaitre la bordure basse de la table, trait plein, couleur */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+div.ingredients p{
+    border: 1px solid lightgray;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0;
+    margin: 5px;
+}
+div.instructions td{
+    vertical-align: top;
+}
+div.instructions tr{
+    height: 40px; /*min-height ne fonctionne pas mais cette valeur sera interpretée comme telle*/
+}
+div.instructions p.numeros{
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #6C829D;
+    color: white;
+    width: 25px;
+    height: 25px;
+    padding-top: 4px;
+    box-sizing: border-box;/*permet de garder la taille de la boite malgré du padding*/
+    border-radius: 50%;/*permet de faire des cercles quand 50%. sinon arrondi les angles. possible en px*/
+    margin: 0;
+
+}
+div.instructions td.etapes_preparation{
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
